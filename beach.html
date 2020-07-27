@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+        integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <style>
+        .img-card {
+            width: 100%;
+            height: auto;
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(3, minmax(50px, 1fr));
+            grid-template-rows: repeat(3, minmax(50px, 200px));
+            grid-column-gap: 20px;
+            grid-row-gap: 30px;
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .img-box1 {
+            position: relative;
+            grid-area: 1/1/3/2;
+        }
+
+        .img-box4 {
+            position: relative;
+            grid-area: 1/2/2/3;
+        }
+
+        .h-box {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            margin: 5%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: rgba(240, 240, 240, .9);
+            font-family: 'Roboto', sans-serif;
+            visibility: hidden;
+            transition: all .5s;
+            transform: rotateX(90deg);
+        }
+
+        div[class^="img-box"]:hover .h-box {
+            visibility: visible;
+            transform: rotateX(0deg);
+        }
+
+        /* .img-box1:hover .h-box {
+            visibility: visible;
+            transform: rotateX(0deg);
+        }
+
+        .img-box2:hover .h-box {
+            visibility: visible;
+            transform: rotateX(0deg);
+        } */
+
+        .h-box i {
+            width: 40px;
+            line-height: 40px;
+            color: white;
+            background: #2279Bd;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .h-box h3 {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        .h-box p {
+            margin-top: 20px;
+            font-size: 16px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="img-card">
+        <div class="img-box1">
+            <img src="img/woman-beach.jpg" alt="">
+            <div class="h-box">
+                <i class="fas fa-search"></i>
+                <h3>Girl One</h3>
+                <p>woman at the beach</p>
+            </div>
+        </div>
+        <div class="img-box4">
+            <img src="img/woman-feeling.jpg" alt="">
+            <div class="h-box">
+                <i class="fas fa-search"></i>
+                <h3>Girl One</h3>
+                <p>woman at the beach</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
